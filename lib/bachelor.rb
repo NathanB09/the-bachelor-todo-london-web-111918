@@ -49,7 +49,7 @@ def get_average_age_for_season(data, season)
   num_contestants = data.fetch(season).size
   total_age = 0
   data.fetch(season).each do |contestant|
-    total_age += contestant["age"].to_i
+    total_age += contestant["age"].to_f
   end
   total_age / num_contestants
 end
